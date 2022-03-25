@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -9,23 +9,48 @@
 
 # Ejemplos variables de texto
 
-# Ingrese tres palabras y arme un acrónimo con ellas
-# Si desea puede modificar el código para ingresar más palabras
-print('Ingrese palabra 1:')
-palabra_1 = str(input())
+texto_1 = '5'
+texto_2 = '7'
 
-print('Ingrese palabra 2:')
-palabra_2 = str(input())
+# 1-Verifique cual de los dos textos es mayor alfabéticamente
+# La comparación alfabética es aquella que se logra cuando
+# se utiliza el operador mayor o menor con Strings (textos)
+# Imprima en pantalla según corresponda
 
-print('Ingrese palabra 3:')
-palabra_3 = str(input())
+if texto_1 > texto_2:
+    print(f'"{texto_1}" es alfabéticamente mayor que "{texto_2}"')
+elif texto_2 > texto_1:
+    print(f'"{texto_2}" es alfabéticamente mayor que "{texto_1}"')    
+else:
+    print('Ambos textos son alfabéticamente equivalentes')    
 
-inicial_1 = palabra_1[0]
-inicial_2 = palabra_2[0]
-inicial_3 = palabra_3[0]
 
-print('El acrónimo de las palabras ingresadas, es ', inicial_1.upper() + inicial_2.upper() + inicial_3.upper())
+# 2-Transforma esas variables tipo texto en variables numéricas con (int)
+# y almacénalas en nuevas variables.
+# Compare las nuevas variables para ver cual es mayor o menor
+# utilizando los operadores correspondientes
+# ¿Cuál de las nuevas variables es mayor?
+# Imprima en pantalla según corresponda
 
-# De cada palabra debe tomar la primera letra y armar el acrónimo
-# Ejemplo: Alumbrado, barrido y limpieza --> ABL
-# Imprimir el resultado en pantalla
+texto1_int = int(texto_1)
+texto2_int = int(texto_2)
+
+if texto1_int > texto2_int:
+    print(f'{texto1_int} es mayor que {texto2_int}')
+elif texto2_int > texto1_int:
+    print(f'{texto2_int} es mayor que {texto1_int}')    
+else:
+    print('Los números son equivalentes')    
+
+
+# Para pensar!
+# ¿Por qué cree que texto_2 es mayor a texto_1?
+# Siendo números tiene sentido, pero son caracteres, texto,
+# aún así el operador arroja el mismo resultado que con las
+# variables numéricas, cierto? ¿Por qué creen que es así?
+# Esta pregunta estará repetida en el Campus para que puedan
+# responder.
+# NOTA: La respuesta no se encuentra en el apunte, sino en Google ;)
+
+print('El código ASCII del 5 como string, es ', ord('5'),'. El código ASCII del 7 como string, es ', ord('7'),'. Sospecho que por esta causa, "5" < "7", también.')
+

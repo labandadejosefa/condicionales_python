@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,40 +12,49 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica con cadenas
+# Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que reciba por consola su nombre completo
-e imprima en pantalla su nombre en los siguientes formatos:
-- Todas las letras en minúsculas
-- Todas las letras en mayúsculas
-- Solo la primera letra del nombre en mayúscula
+Realice un programa que solicite ingresar tres valores de temperatura
+De las temperaturas ingresadas por consola determinar:
+1 - ¿Cuáles de ellas es la máxima temperatura ingresada?
+2 - ¿Cuáles de ellas es la mínima temperatura ingresada?
+3 - ¿Cuál es el promedio de las temperaturas ingresadas?
 
-NOTA: Para realizar este ejercicio deberá usar los siguientes métodos
-de strings:
-- lower
-- upper
-- capitalize
+En cada caso imprimir en pantalla el resultado
 
-Puede buscar en internet como usar en Python estos métodos.
-Les dejamos el siguiente link que posee casos de uso de algunos de ellos:
-
-Link de referencia:
-https://www.geeksforgeeks.org/isupper-islower-lower-upper-python-applications/
-
-Cualquier duda con estos métodos pueden consultarla por el campus
+IMPORTANTE: Para ordenar las temperatuas debe utilizar condicionales compuestos o anidados,
+no se busca utilizar bucles o algoritmos de ordenamiento ya que aún no hemos llegado a ese
+contenido. Recomendamos pensar bien este problema de lógica con un lápiz y papel.
 '''
 
-print('Ahora si! buena suerte')
+print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
 
-nombre1 = str(input('Ingrese su primer nombre '))
-nombre2 = str(input('Ingrese su segundo nombre '))
-apellido = str(input('Ingrese su apellido '))
+temp1 = float(input('Ingrese el primer valor de temperatura:\n'))
+temp2 = float(input('Ingrese el segundo valor de temperatura:\n'))
+temp3 = float(input('Ingrese el tercer valor de temperatura:\n'))
+promedio = (temp1 + temp2 + temp3)/3
 
-print('Todas minúsculas: ',nombre1.lower() + ' ' + nombre2 + ' ' + apellido.lower())
-print('Todas mayúsculas: ',nombre1.upper() + ' ' + nombre2.upper() + ' ' + apellido.upper())
-print('Sólo iniciales en mayúsculas: ',nombre1.capitalize() + ' ' + nombre2.capitalize() + ' ' + apellido.capitalize())
+if (temp1 >= temp2) and (temp1 >= temp3):
+    print(f'La máxima temperatura ingresada, es {temp1} ºC')
+    if temp2 >= temp3:
+        print(f'La mínima temperatura ingresada, es {temp3} ºC')
+    else:
+        print(f'La mínima temperatura ingresada, es {temp2} ºC')
 
+elif (temp2 >= temp1) and (temp2 >= temp3):
+    print(f'La máxima temperatura ingresada, es {temp2} ºC')
+    if temp1 >= temp3:
+        print(f'La mínima temperatura ingresada, es {temp3} ºC')
+    else:
+        print(f'La mínima temperatura ingresada, es {temp1} ºC')
 
+elif (temp3 >= temp1) and (temp3 >= temp2):
+    print(f'La máxima temperatura ingresada, es {temp3} ºC')
+    if temp1 >= temp2:
+        print(f'La mínima temperatura ingresada, es {temp2} ºC')
+    else:
+        print(f'La mínima temperatura ingresada, es {temp1} ºC')    
 
+print(f'El promedio de las tempraturas ingresadas, es {round(promedio,2)} ºC')        

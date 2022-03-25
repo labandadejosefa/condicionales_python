@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,39 +12,34 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica numérica y cadenas
+# Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que consulte por consola:
-- El nombre completo de la persona
-- El DNI de la persona
-- La edad de la persona
-- La altura de la persona
-
-Finalmente el programa debe imprimir dos líneas de texto por separado
-- En una línea imprimir el nombre completo y el DNI, aclarando de que
-  campo se trata cada uno
-        Ej: Nombre Completo: Nombre Apellido , DNI:35205070,
-- En la segunda línea se debe imprimir el nombre completo, edad y
-  altura de la persona
-  Nuevamente debe aclarar el campo de cada uno, para el que lo lea
-  entienda de que se está hablando.
+Realice un programa que solicite el ingreso de tres números
+enteros, y luego en cada caso informe si el número es par
+o impar.
+Para cada caso imprimir el resultado en pantalla.
 '''
 
-print('Sistema de ingreso de datos')
+print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
 
-nombre = str(input('Ingrese su/s nombre/s '))
-apellido = str(input('Ingrese su apellido '))
-docu = int(input('Ingrese su DNI sin puntos ni espacios '))
-edad = int(input('Ingrese su edad '))
-altura = float(input('Ingrese su altura, separando decimales con punto '))
+num1= int(input('Ingrese el primer número:\n'))
+num2= int(input('Ingrese el segundo número:\n'))
+num3= int(input('Ingrese el tercer número:\n'))
 
-print(f"Nombre completo: {nombre} {apellido}. DNI: {docu}.")
-print(f"Nombre completo: {nombre} {apellido}. Edad: {edad} años. Altura: {altura} metros.")
+if (num1 % 2) == 0: 
+    print(f'{num1} es un número par.')
+else:
+    print(f'{num1} es un número impar.')    
 
+if (num2 % 2) == 0: 
+    print(f'{num2} es un número par.')
+else:
+    print(f'{num2} es un número impar.')    
 
-
-
-
+if (num3 % 2) == 0: 
+    print(f'{num3} es un número par.')
+else:
+    print(f'{num3} es un número impar.')    
 

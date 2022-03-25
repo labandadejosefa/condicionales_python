@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -15,34 +15,22 @@
 # Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un calculadora, se ingresará por línea de comando dos
-números reales y se deberá calcular todas las operaciones entre ellos:
-A) Suma
-B) Resta
-C) Multiplicación
-D) División
-E) Exponente/Potencia
-
-- Para todos los casos se debe imprimir en pantalla el resultado aclarando
-  la operación realizada en cada caso y con que números
-  se ha realizado la operación
-  ej: La suma entre 4.2 y 6.5 es 10.7
+Realice un programa que solicite por consola 2 números
+Calcule la diferencia entre ellos e informe por pantalla
+si el resultado es positivo, negativo o cero.
 '''
 
-print('¡Nuestra primera calculadora!')
+print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
 
-num_1 = float(input('Ingrese un número real: '))
-num_2 = float(input('Ingrese otro número real: '))
+num1 = int(input('Ingrese un número:\n'))
+num2 = int(input('Ingrese otro número:\n'))
 
-adic = num_1 + num_2
-dife = num_1 - num_2
-produ = num_1 * num_2
-cociente = num_1 / num_2
-expo = num_1 ** num_2
+resta = num1 - num2
 
-print('La suma de',num_1,'y',num_2, ', es',adic)
-print('La resta de',num_1,'menos',num_2, ', es',dife)
-print('El producto entre',num_1,'y',num_2, ', es',produ)
-print('El cociente entre',num_1,'y',num_2, ', es',round(cociente,4))
-print('El valor de ',num_1, 'elevado a la potencia',num_2, ', es',expo)
+if resta == 0:
+    print('Los números ingresados son idénticos. Su diferencia es igual a cero. ')
+elif resta > 0:
+    print(f'La diferencia entre {num1} y {num2} es un valor positivo, pues {num1} es mayor que {num2}.')
+else:
+    print(f'La diferencia entre {num1} y {num2} es un valor negativo, pues {num1} es menor que {num2}.')        

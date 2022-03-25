@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,25 +7,58 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejemplos variables de texto
+# Ejercicios de práctica numérica
 
-# Ingrese primero su nombre y luego su apellido
-# Capture ambos datos e imprima su nombre completo
-print('Ingrese por consola su/s nombre/s:')
-nombre = str(input())
+# Condicionales anidados
+numero_1 = 7
+numero_2 = -2
 
-print('Ingrese por consola su/s apellido/s:')
-apellido = str(input())
+# Verifique si el numero_1 es mayor a 5
+#   --> En caso afirmativo, verifique si el numero_2
+#       es positivo
+#       --> En caso afirmativo imprima en pantalla "Resp=1"
+#       --> En caso negativo imprima en pantalla   "Resp=2"
+#  --> En caso negativo (numero_1 no es mayor a 5)
+#      verifique si el numero_2 es mayor a 5
+#       --> En caso afirmativo imprima en pantalla "Resp=3"
+#       --> En caso negativo imprima en pantalla "Resp=4"
 
-# Imprima su nombre completo
-print('Su nombre completo es',nombre + ' ' + apellido)
+if numero_1 >5:
+    if numero_2 >0:
+        print('Resp=1')
+    else:
+        print('Resp=2')    
+else:
+    if numero_2 >5:
+        print('Resp=3')
+    else:
+        print('Resp=4')    
 
-# Almacenar su nombre completo en una variable
-# nombre_completo = .....
-nombre_completo= nombre + apellido
 
-cant_letras = len(nombre_completo)
-print('El total de caracteres de su nombre completo, es ',cant_letras)
+# Verifique la calificación de un estudiante según su
+# puntaje en un examen
+puntaje = 70
 
-# Imprimir la cantidad de letras que posee su nombre completo
-# cantidad_letras = len(....)
+# Si el puntaje es mayor igual a 90 --> imprimir A
+# Si el puntaje es mayor igual a 80 --> imprimir B
+# Si el puntaje es mayor igual a 70 --> imprimir C
+# Si el puntaje es mayor igual a 60 --> imprimir D
+# Si el puntaje es menor a  60      --> imprimir F
+
+# Debe imprimir en pantalla la calificacion
+# Utilizar "if" anidados
+
+if puntaje < 60:
+    print('Calificación: F')
+else:
+    if 60 <= puntaje < 70:
+        print('Calificación: D')
+    elif 70 <= puntaje < 80:
+        print('Calificación: C')
+    elif 80 <= puntaje < 90:
+        print('Calificación: B')    
+    else:
+        print('Calificación: A')    
+
+        
+

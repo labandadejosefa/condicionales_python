@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,50 +12,78 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica numérica y cadenas
+# Ejercicios de práctica con texto
 '''
 Enunciado:
-Realice un programa que determine cual sería el apellido de una persona
-al ingresara los dos nombres completos de sus padres.
-En definitiva se solicita crear una variable nueva que reuna
-los apellidos.
+Realice un programa que solicite por consola 3 palabras cualesquiera
+Luego el programa debe consultar al usuario como quiere ordenar las palabras
+1 - Ordenar por orden alfabético (usando el operador ">")
+2 - Ordenar por cantidad de letras (longitud de la palabra (len) y operador ">")
 
-- Primero el programa debe consultar el nombre completo del padre_1
-- Luego el programa debe consultar el nombre completo del padre_2
-- Luego debe consultar el nombre del hijo/a
-- Debe extraer los apellidos de los padres (ver la nota al final)
-- Luego formar el nombre completo del hijo/a utilizando los apellidos
-  de sus padres y el nombre ingresado de dicha persona
-- Imprimir en pantalla el resultado
+Si se ingresa "1" por consola se deben ordenar las 3 palabras por orden alfabético
+e imprimir en pantalla de la mayor a la menor
 
-NOTA: Para extraer el apellido del nombre completo recomendamos usar
-el método "split"
-Mostraremos un ejemplo:
+Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
+e imprimir en pantalla de la mayor a la menor
 
-direccion_completa = 'Monroe 2716'
-calle, altura = direccion_completa.split(' ')
-
-Les dejo por su cuenta a que busquen un poco más acerca de este método
-que seguramente utilizarán mucho de acá en adelante.
-Les dejamos un link con algunos ejemplos más:
-https://www.pythonforbeginners.com/dictionary/python-split
-
-Cualquier duda con el método split pueden consultarla por el campus
+IMPORTANTE: Para ordenar las palabras deben realizar condicionales compuestos o anidados,
+no se busca utilizar bucles o algoritmos de ordenamiento ya que aún no hemos llegado a ese
+contenido.
 '''
 
-print('Jugando con texto')
+print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
-completo_xadre1 = str(input('Ingrese nombre/s y apellido de su madre '))
-completo_xadre2 = str(input('Ingrese nombre/s y apellido de su padre '))
 
-xadre1 = completo_xadre1.split()
-xadre2 = completo_xadre2.split()
+palabra_1 = str(input('Ingrese una palabra: \n'))
+palabra_2 = str(input('Ingrese otra palabra: \n'))
+palabra_3 = str(input('Ingrese una palabra más: \n'))
 
-nombre_pila = str(input('Ingrese su nombre de pila '))
+opcion = int(input('Presione "1" para ordenar las palabras alfabéticamente; o "2" para ordenarlas según su cantidad de letras: \n'))
 
-nombre_completo = nombre_pila.capitalize() + ' ' + xadre1[-1].capitalize() + ' ' + xadre2 [-1].capitalize()
+if opcion == 1:
+    if (palabra_1 >= palabra_2) and (palabra_1 >= palabra_3):
+        if palabra_2 >= palabra_3:
+            print(f'Orden alfabético, de mayor a menor: {palabra_1}, {palabra_2}, {palabra_3}.')
+        else:
+            print(f'Orden alfabético de mayor a menor: {palabra_1}, {palabra_3}, {palabra_2}.')    
 
-print('Su nombre completo es ',nombre_completo)
+    if (palabra_2 >= palabra_1) and (palabra_2 >= palabra_3):
+        if palabra_1 >= palabra_3:
+            print(f'Orden alafabético de mayor a menor: {palabra_2}, {palabra_1}, {palabra_3}.')
+        else:
+            print(f'Orden alafabético de mayor a menor: {palabra_2}, {palabra_3}, {palabra_2}.')    
+
+    if (palabra_3 >= palabra_1) and (palabra_3 >= palabra_2):
+        if palabra_1 >= palabra_2:
+            print(f'Orden alfabético de mayor a menor: {palabra_3}, {palabra_1}, {palabra_2}.')
+        else:
+            print(f'Orden alafabético de mayor a menor: {palabra_3}, {palabra_2}, {palabra_1}.')
+
+elif opcion == 2:
+    if (len(palabra_1) >= len(palabra_2) and len(palabra_1) >= len(palabra_3)):
+        if (len(palabra_2) >= len(palabra_3)):
+            print(f'Orden por cantidad de letras, de mayor a menor: {palabra_1}, {palabra_2}, {palabra_3}.')
+        else:
+            print(f'Orden por cantidad de letras, de mayor a menor: {palabra_1}, {palabra_3}, {palabra_2}.')    
+
+    if (len(palabra_2) >= len(palabra_1) and len(palabra_2) >= len(palabra_3)):
+        if (len(palabra_1) >= len(palabra_3)):
+            print(f'Orden por cantidad de letras, de mayor a menor: {palabra_2}, {palabra_1}, {palabra_3}.')
+        else:
+            print(f'Orden por cantidad de letras, de mayor a menor: {palabra_2}, {palabra_3}, {palabra_2}.')    
+
+    if (len(palabra_3) >= len(palabra_1) and len(palabra_3) >= len(palabra_2)):
+        if (len(palabra_1) >= len(palabra_2)):
+            print(f'Orden por cantidad de letras, de mayor a menor: {palabra_3}, {palabra_1}, {palabra_2}.')
+        else:
+            print(f'Orden por cantidad de letras, de mayor a menor: {palabra_3}, {palabra_2}, {palabra_1}.')
+
+
+
+
+
+    
+
 
 
 
