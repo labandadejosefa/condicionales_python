@@ -78,7 +78,9 @@ elif opcion == 2:
         else:
             print(f'Orden por cantidad de letras, de mayor a menor: {palabra_3}, {palabra_2}, {palabra_1}.')
 
-
+else:
+    print('La opción ingresada no es correcta.')
+    
 
 
 
